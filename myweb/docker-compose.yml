@@ -1,0 +1,12 @@
+version: '3.13'
+
+services:
+  web:
+    build:
+      context: ../myweb
+    ports:
+      - "8000:8000"
+    volumes:
+      - "../myweb:/app"
+    environment:
+      - DEBUG=True
